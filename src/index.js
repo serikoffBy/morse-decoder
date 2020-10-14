@@ -36,7 +36,7 @@ const MORSE_TABLE = {
     '----.':  '9',
     '-----':  '0',
 };
-//00101010100000000010001011101000101110100000111111**********00001011110000111111000010111000101110100000111010
+
 function decode(expr) {
     let str = '';
     let resultStr = '';
@@ -45,7 +45,6 @@ function decode(expr) {
         arr[i] = expr.slice(i*10, i*10+10);
     }
     arr.forEach(item => {
-        resultStr = '';
         str = '';
         if(item !== '**********') {
             for(let i = 0; i < item.length / 2; i++) {
